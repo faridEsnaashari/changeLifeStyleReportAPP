@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/changeLifeStyleReportAPP/static/css/main.3753b8a8.chunk.css",
-    "main.js": "/changeLifeStyleReportAPP/static/js/main.6255a789.chunk.js",
-    "main.js.map": "/changeLifeStyleReportAPP/static/js/main.6255a789.chunk.js.map",
+    "main.css": "/changeLifeStyleReportAPP/static/css/main.41bc2500.chunk.css",
+    "main.js": "/changeLifeStyleReportAPP/static/js/main.29f0839c.chunk.js",
+    "main.js.map": "/changeLifeStyleReportAPP/static/js/main.29f0839c.chunk.js.map",
     "runtime-main.js": "/changeLifeStyleReportAPP/static/js/runtime-main.5cdcbb46.js",
     "runtime-main.js.map": "/changeLifeStyleReportAPP/static/js/runtime-main.5cdcbb46.js.map",
     "static/js/2.69b0babc.chunk.js": "/changeLifeStyleReportAPP/static/js/2.69b0babc.chunk.js",
     "static/js/2.69b0babc.chunk.js.map": "/changeLifeStyleReportAPP/static/js/2.69b0babc.chunk.js.map",
     "index.html": "/changeLifeStyleReportAPP/index.html",
-    "static/css/main.3753b8a8.chunk.css.map": "/changeLifeStyleReportAPP/static/css/main.3753b8a8.chunk.css.map",
+    "static/css/main.41bc2500.chunk.css.map": "/changeLifeStyleReportAPP/static/css/main.41bc2500.chunk.css.map",
     "static/js/2.69b0babc.chunk.js.LICENSE.txt": "/changeLifeStyleReportAPP/static/js/2.69b0babc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5cdcbb46.js",
     "static/js/2.69b0babc.chunk.js",
-    "static/css/main.3753b8a8.chunk.css",
-    "static/js/main.6255a789.chunk.js"
+    "static/css/main.41bc2500.chunk.css",
+    "static/js/main.29f0839c.chunk.js"
   ]
 }
