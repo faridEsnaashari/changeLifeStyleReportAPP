@@ -1,5 +1,5 @@
 .report-main-container {
-    padding: 20vh 20vw 0 0;
+    padding: 3vh 20vw;
     font-size: 1.55rem;
 }
 
@@ -9,7 +9,6 @@
 }
 
 .report-main-container input {
-    width: 0;
     width: 0em;
     height: 0em;
     position: absolute;
@@ -76,4 +75,73 @@
     font-size: .8em;
     display: flex;
     justify-content: center;
+}
+
+.name-input-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    margin-top: 2em;
+}
+
+.name-input-container input {
+    height: 3em;
+    outline: unset;
+    border: 2px solid #716edb;
+    border-radius: 5px;
+    padding-left: 3rem;
+    direction: ltr;
+    transition: border 200ms;
+    width: 100%;
+    position: unset;
+    opacity: unset;
+}
+
+.name-input-container input::before {
+    content: "";
+    display: block;
+}
+
+.name-input-container input:focus {
+    border: 2px solid #312f77;
+}
+
+.name-input-container .submit-button {
+    width: 5em;
+    height: 3em;
+    border: 2px solid #7ddb0c;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: background-color 200ms;
+}
+
+.name-input-container .submit-button:hover {
+    background-color: #52dd2b;
+    color: #fff;
+}
+
+.id-mark {
+    position: absolute;
+    left: 1rem;
+    color: #5e5757;
+    top: 3px;
+}
+
+.id-error {
+    color: #c61111;
+}
+
+.name-input {
+    position: relative;
+}
+
+@media(max-width:720px){
+    .name-input-container {
+        width: 100%;
+    }
 }

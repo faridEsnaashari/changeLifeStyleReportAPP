@@ -1,8 +1,6 @@
 import { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import "./indexStyles.css";
-
 const InputIdPage = props => {
 
     const history = useHistory();
@@ -30,7 +28,6 @@ const InputIdPage = props => {
                 <input ref={ inputRef } type="text"/>
                 <div className="submit-button" onClick={ onClick }>ورود</div>
                 { idError && <span className="id-error">آیدی خود را وارد کنید</span> }
-                
             </div>
         </div>
     );

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 
 import "./indexStyles.css";
 
@@ -9,13 +8,11 @@ import LoadingCircle from "../../components/GeneralComponents/LoadingCircle/Load
 
 const ReportPage = props => {
 
-    const history = useHistory();
+    const [ idInput, setIdInput ] = useState("");
 
     useEffect(() => {
         const id = localStorage.getItem("id");
-        if(!id){
-           history.push("/id");
-        }
+        setIdInput(id);
     }, []);
 
     const [ sendReportsAction, sendReportsResult ] = useAPICaller().sendReportsCaller;
@@ -40,9 +37,18 @@ const ReportPage = props => {
     };
 
     const onSubmit = () => {
-        const id = localStorage.getItem("id");
+
+        const id = idInput;
+
+        if(!id){
+            return setIdError(true);
+        }
+
+        localStorage.setItem("id", id);
         sendReportsAction({ ...reportItems, id });
     };
+
+    const [ idError, setIdError ] = useState(false);
 
     return(
         <div className="report-main-container">
@@ -91,6 +97,14 @@ const ReportPage = props => {
                 <input type="checkbox" checked={ reportItems.shower } onChange={ () => onValueChanged("shower") }/>
                 <span className="radio-button-style"/>
             </label>
+            <div className="name-input-container">
+                <span>آیدی خود را وارد کنید</span>
+                <div className="name-input">
+                    <span className="id-mark">@</span>
+                    <input value={ idInput } onChange={ e => setIdInput(e.target.value) } type="text"/>
+                </div>
+                { idError && <span className="id-error">آیدی خود را وارد کنید</span> }
+            </div>
             <div className="submit-botton" onClick={ onSubmit }>
                 {
                     sendReportsResult.isFetching 
