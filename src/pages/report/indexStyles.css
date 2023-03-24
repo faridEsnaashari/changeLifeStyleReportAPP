@@ -1,0 +1,79 @@
+.report-main-container {
+    padding: 20vh 20vw 0 0;
+    font-size: 1.55rem;
+}
+
+.report-main-container input:checked ~ span {
+    background-color: #68ff00;;
+    border: none;
+}
+
+.report-main-container input {
+    width: 0;
+    width: 0em;
+    height: 0em;
+    position: absolute;
+    opacity: 0;
+}
+
+.report-main-container label span {
+    width: 1em;
+    height: 1em;
+    border: 1px solid red;
+    display: flex;
+    border-radius: 10px;
+    margin-right: .5em;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 200ms;
+}
+
+.report-main-container label {
+    display: flex;
+    margin-bottom: 1em;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+}
+
+.report-main-container input:checked ~ span::after {
+    display: block;
+    content: "";
+    width: 5px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-width: 0 2px 3px 0;
+    transform: rotate(45deg);
+}
+
+.submit-botton {
+    background-color: #139334;
+    width: 5em;
+    height: 2em;
+    padding: .5em;
+    border-radius: 10px;
+    margin-top: 2em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-botton:hover {
+    background-color: #086a21;
+}
+
+.submit-botton > div {
+    width: 1em;
+    height: 1em;
+}
+
+.submit-botton > span {
+    width: 100%;
+    height: 100%;
+    font-size: .8em;
+    display: flex;
+    justify-content: center;
+}

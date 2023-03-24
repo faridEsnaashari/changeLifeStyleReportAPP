@@ -1,0 +1,12 @@
+body{
+    margin: unset;
+}
+
+p{
+    margin: unset;
+}
+
+* {
+    box-sizing: border-box;
+    direction: rtl;
+}
