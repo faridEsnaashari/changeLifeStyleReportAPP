@@ -5,6 +5,7 @@ import "./indexStyles.css";
 import useAPICaller from "../../APIs/APICallers/APICallers";
 
 import LoadingCircle from "../../components/GeneralComponents/LoadingCircle/LoadingCircle";
+import {SUCCESS_MSG} from "../../tools/statusCodes";
 
 const ReportPage = props => {
 
@@ -29,6 +30,15 @@ const ReportPage = props => {
         shower: false,
     });
 
+    useEffect(() => {
+        if(sendReportsResult.status === SUCCESS_MSG){
+            localStorage.setItem("messageId", sendReportsResult.data.messageId);
+
+            const time = new Date();
+            localStorage.setItem("messageTime", time.getTime());
+        }
+    }, [sendReportsResult]);
+
     const onValueChanged = item => {
         const preparedReportItems = { ...reportItems };
         preparedReportItems[item] = !reportItems[item];
@@ -45,7 +55,11 @@ const ReportPage = props => {
         }
 
         localStorage.setItem("id", id);
-        sendReportsAction({ ...reportItems, id });
+
+        const messageTime = localStorage.getItem("messageTime");
+        const messageId = localStorage.getItem("messageId");
+        
+        sendReportsAction({ ...reportItems, id, messageId, messageTime });
     };
 
     const [ idError, setIdError ] = useState(false);
