@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/changeLifeStyleReportAPP/static/css/main.41bc2500.chunk.css",
-    "main.js": "/changeLifeStyleReportAPP/static/js/main.29f0839c.chunk.js",
-    "main.js.map": "/changeLifeStyleReportAPP/static/js/main.29f0839c.chunk.js.map",
+    "main.js": "/changeLifeStyleReportAPP/static/js/main.affba2de.chunk.js",
+    "main.js.map": "/changeLifeStyleReportAPP/static/js/main.affba2de.chunk.js.map",
     "runtime-main.js": "/changeLifeStyleReportAPP/static/js/runtime-main.5cdcbb46.js",
     "runtime-main.js.map": "/changeLifeStyleReportAPP/static/js/runtime-main.5cdcbb46.js.map",
     "static/js/2.69b0babc.chunk.js": "/changeLifeStyleReportAPP/static/js/2.69b0babc.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.5cdcbb46.js",
     "static/js/2.69b0babc.chunk.js",
     "static/css/main.41bc2500.chunk.css",
-    "static/js/main.29f0839c.chunk.js"
+    "static/js/main.affba2de.chunk.js"
   ]
 }
