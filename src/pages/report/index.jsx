@@ -10,6 +10,8 @@ import {SUCCESS_MSG} from "../../tools/statusCodes";
 const ReportPage = props => {
 
     const [ idInput, setIdInput ] = useState("");
+    
+    const [ descriptionInput, setDescriptionInput ] = useState("");
 
     useEffect(() => {
         const id = localStorage.getItem("id");
@@ -58,8 +60,10 @@ const ReportPage = props => {
 
         const messageTime = localStorage.getItem("messageTime");
         const messageId = localStorage.getItem("messageId");
+
+        const description = descriptionInput;
         
-        sendReportsAction({ ...reportItems, id, messageId, messageTime });
+        sendReportsAction({ ...reportItems, id, messageId, messageTime, description });
     };
 
     const [ idError, setIdError ] = useState(false);
@@ -111,6 +115,10 @@ const ReportPage = props => {
                 <input type="checkbox" checked={ reportItems.shower } onChange={ () => onValueChanged("shower") }/>
                 <span className="radio-button-style"/>
             </label>
+            <label>
+                توضیحات:
+            </label>
+            <textarea onChange={ e => setDescriptionInput(e.target.value) }/>
             <div className="name-input-container">
                 <span>آیدی خود را وارد کنید</span>
                 <div className="name-input">

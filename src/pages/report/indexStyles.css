@@ -3,6 +3,16 @@
     font-size: 1.55rem;
 }
 
+.report-main-container textarea {
+    width: 440px;
+    height: 136px;
+    outline: unset;
+    border: 1px solid;
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+}
+
 .report-main-container input:checked ~ span {
     background-color: #68ff00;;
     border: none;
